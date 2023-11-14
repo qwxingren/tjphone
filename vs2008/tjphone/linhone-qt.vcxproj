@@ -1,0 +1,2008 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>linphone-qt</ProjectName>
+    <ProjectGuid>{FA8F106A-664F-3F4F-AC9D-371749A53B81}</ProjectGuid>
+    <RootNamespace>qt</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)SDK\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)building\$(Configuration)\$(ProjectName)\</IntDir>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)SDK\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)building\$(Configuration)\$(ProjectName)\</IntDir>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <WarningLevel>0</WarningLevel>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\SDK\include;..\..\SDK\include\glib-2.0;d:\qt\qt-4.8.0-static-vs2008\include\QtCore;d:\qt\qt-4.8.0-static-vs2008\include\QtGui;d:\qt\qt-4.8.0-static-vs2008\include;.;..\..\linphone-3.5.2\qt;..\..\linphone-3.5.2\;..\..\linphone-3.5.2\coreapi\;..\..\linphone-3.5.2\mediastreamer2\include;..\..\linphone-3.5.2\oRTP\include;..\..\libeXosip2-3.6.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_LARGEFILE_SUPPORT;QT_GUI_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;_DEBUG;_CRT_SECURE_NO_DEPRECATE;_LIB;HAVE_SPEEXDSP;HAVE_SPEEX_NOISE;ORTP_INET6;IN_LINPHONE;WINDOW_NATIVE;ENABLE_TRACE;OSIP_MT;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <StructMemberAlignment>8Bytes</StructMemberAlignment>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_LARGEFILE_SUPPORT;QT_DLL;QT_GUI_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type=%27win32%27 name=%27Microsoft.Windows.Common-Controls%27 version=%276.0.0.0%27 publicKeyToken=%276595b64144ccf1df%27 language=%27*%27 processorArchitecture=%27*%27" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>libgcc.a;libmingwex.a;libglib-2.0.a;libz.a;libintl.a;libiconv.a;libole32.a;qtmaind.lib;QtGuid.lib;QtCored.lib;eXosip.lib;osipparser2.lib;osip2.lib;Ws2_32.lib;mediastreamer2.lib;ortp.lib;srtp.lib;gsm.lib;Winmm.lib;libcoreapi.lib;libspeex.lib;libspeexdsp.lib;libresample.lib;libtheora.lib;vfw32.lib;avcodec.lib;avdevice.lib;avformat.lib;avfilter.lib;avutil.lib;swscale.lib;libvorbis.lib;libvorbisfile.lib;ogg_static.lib;Wininet.lib;winmm.lib;IMM32.LIB;Iphlpapi.lib;dnsapi.lib;Qwave.lib;libcmtd.lib;vpxmtd.lib;uscg729.lib;libeay32MTd.lib;ssleay32MTd.lib;crypt32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\SDK\bin\tjphone.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\sdk\Libs\glib;d:\qt\qt-4.8.0-static-vs2008\lib;..\..\sdk\Libs;..\..\sdk\Libs\ipp\;..\..\sdk\Libs\ffmpeg-bin-win32;..\..\sdk\Libs\g729fp;..\..\sdk\Libs\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>MSVCRTD.lib;msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <DelayLoadDLLs>qwave.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>
+      </ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <LinkTimeCodeGeneration>
+      </LinkTimeCodeGeneration>
+      <SupportUnloadOfDelayLoadedDLL>true</SupportUnloadOfDelayLoadedDLL>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <WarningLevel>0</WarningLevel>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>.\;..\..\SDK\include;..\..\SDK\include\glib-2.0;d:\qt\qt-4.8.0-static-vs2008\include\QtCore;d:\qt\qt-4.8.0-static-vs2008\include\QtGui;d:\qt\qt-4.8.0-static-vs2008\include;..\..\linphone-3.5.2\qt;..\..\linphone-3.5.2\;..\..\linphone-3.5.2\coreapi\;..\..\linphone-3.5.2\mediastreamer2\include;..\..\linphone-3.5.2\oRTP\include;..\..\libeXosip2-3.6.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_LARGEFILE_SUPPORT;QT_LIB;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_LIB;HAVE_SPEEXDSP;HAVE_SPEEX_NOISE;ORTP_INET6;IN_LINPHONE;WINDOW_NATIVE;OSIP_MT;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <UndefinePreprocessorDefinitions>QT_DLL;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>QT_NO_DEBUG;NDEBUG;_WINDOWS;UNICODE;WIN32;QT_LARGEFILE_SUPPORT;QT_DLL;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type=%27win32%27 name=%27Microsoft.Windows.Common-Controls%27 version=%276.0.0.0%27 publicKeyToken=%276595b64144ccf1df%27 language=%27*%27 processorArchitecture=%27*%27" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>libgcc.a;libmingwex.a;libglib-2.0.a;libz.a;libintl.a;libiconv.a;libole32.a;qtmain.lib;QtGui.lib;QtCore.lib;eXosip.lib;osipparser2.lib;osip2.lib;Ws2_32.lib;mediastreamer2.lib;ortp.lib;srtp.lib;gsm.lib;Winmm.lib;imm32.lib;libcoreapi.lib;libspeex.lib;libspeexdsp.lib;libresample.lib;libtheora.lib;vfw32.lib;avcodec.lib;avdevice.lib;avformat.lib;avfilter.lib;avutil.lib;swscale.lib;libvorbis.lib;libvorbisfile.lib;ogg_static.lib;Wininet.lib;Iphlpapi.lib;dnsapi.lib;Qwave.lib;libcmt.lib;vpxmt.lib;uscg729.lib;libeay32MT.lib;ssleay32MT.lib;crypt32.lib;kernel32.lib;user32.lib;shell32.lib;uuid.lib;ole32.lib;advapi32.lib;ws2_32.lib;gdi32.lib;comdlg32.lib;oleaut32.lib;winmm.lib;winspool.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\SDK\bin\tjphone.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\sdk\Libs\Release;d:\qt\qt-4.8.0-static-vs2008\lib;..\..\sdk\Libs\glib;..\..\sdk\Libs;..\..\sdk\Libs\ipp\;..\..\sdk\Libs\ffmpeg-bin-win32;..\..\sdk\Libs\g729fp;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>MSVCRTD.lib;libcmtd.lib;MSVCRT.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <DelayLoadDLLs>qwave.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ProgramDatabaseFile>
+      </ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <LinkTimeCodeGeneration>
+      </LinkTimeCodeGeneration>
+      <SupportUnloadOfDelayLoadedDLL>true</SupportUnloadOfDelayLoadedDLL>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\linphone-3.5.2\qt\callhistory.cpp" />
+    <ClCompile Include="..\..\linphone-3.5.2\qt\callviewframe.cpp" />
+    <ClCompile Include="..\..\linphone-3.5.2\qt\chatroom.cpp" />
+    <ClCompile Include="..\..\linphone-3.5.2\qt\conferenceframe.cpp" />
+    <ClCompile Include="..\..\linphone-3.5.2\qt\contact.cpp" />
+    <ClCompile Include="..\..\linphone-3.5.2\qt\custom_tree.cpp" />
+    <ClCompile Include="..\..\linphone-3.5.2\qt\debugwindow.cpp" />
+    <ClCompile Include="..\..\linphone-3.5.2\qt\friend_list.cpp" />
+    <ClCompile Include="..\..\linphone-3.5.2\qt\HTMLDelegate.cpp" />
+    <ClCompile Include="..\..\linphone-3.5.2\qt\linphone_callback.cpp" />
+    <ClCompile Include="..\..\linphone-3.5.2\qt\main.cpp" />
+    <ClCompile Include="..\..\linphone-3.5.2\qt\mainwindow.cpp" />
+    <ClCompile Include="..\..\linphone-3.5.2\qt\password.cpp" />
+    <ClCompile Include="..\..\linphone-3.5.2\qt\preference.cpp" />
+    <ClCompile Include="..\..\linphone-3.5.2\qt\sip_account.cpp" />
+    <ClCompile Include="..\..\linphone-3.5.2\qt\support.cpp" />
+    <ClCompile Include="GeneratedFiles\qrc_treeview.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_callhistory.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_callviewframe.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_chatroom.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_conferenceframe.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_contact.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_custom_tree.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_debugwindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_friend_list.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_mainwindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_password.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_preference.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_sip_account.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_callhistory.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_callviewframe.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_chatroom.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_conferenceframe.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_contact.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_custom_tree.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_debugwindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_friend_list.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_mainwindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_password.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_preference.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_sip_account.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\callhistory.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -D_DEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DENABLE_TRACE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I." "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\callhistory.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_LIB -DNDEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I." "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\callhistory.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\callviewframe.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -D_DEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DENABLE_TRACE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I." "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\callviewframe.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_LIB -DNDEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I." "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\callviewframe.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\chatroom.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -D_DEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DENABLE_TRACE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I." "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\chatroom.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_LIB -DNDEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I." "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\chatroom.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\conferenceframe.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -D_DEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DENABLE_TRACE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I." "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\conferenceframe.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_LIB -DNDEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I." "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\conferenceframe.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\contact.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -D_DEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DENABLE_TRACE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I." "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\contact.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_LIB -DNDEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I." "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\contact.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\custom_tree.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -D_DEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DENABLE_TRACE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I." "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\custom_tree.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_LIB -DNDEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I." "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\custom_tree.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\debugwindow.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -D_DEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DENABLE_TRACE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I." "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\debugwindow.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_LIB -DNDEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I." "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\debugwindow.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\friend_list.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -D_DEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DENABLE_TRACE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I." "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\friend_list.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_LIB -DNDEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I." "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\friend_list.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\..\linphone-3.5.2\qt\HTMLDelegate.h" />
+    <ClInclude Include="..\..\linphone-3.5.2\qt\linphone.h" />
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\mainwindow.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -D_DEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DENABLE_TRACE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I." "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\mainwindow.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_LIB -DNDEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I." "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\mainwindow.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\password.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -D_DEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DENABLE_TRACE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I." "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\password.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_LIB -DNDEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I." "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\password.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\preference.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -D_DEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DENABLE_TRACE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I." "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\preference.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_LIB -DNDEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I." "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\preference.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="resource.h" />
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\sip_account.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -D_DEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DENABLE_TRACE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I." "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\sip_account.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"   -D_WINDOWS -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_LIB -DNDEBUG -D_CRT_SECURE_NO_DEPRECATE -D_LIB -DHAVE_SPEEXDSP -DHAVE_SPEEX_NOISE -DORTP_INET6 -DIN_LINPHONE -DWINDOW_NATIVE -DOSIP_MT -DHAVE_CONFIG_H -D_UNICODE  "-I." "-I.\..\..\SDK\include" "-I.\..\..\SDK\include\glib-2.0" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtCore" "-Id:\qt\qt-4.8.0-static-vs2008\include\QtGui" "-Id:\qt\qt-4.8.0-static-vs2008\include" "-I.\..\..\linphone-3.5.2\qt" "-I.\..\..\linphone-3.5.2" "-I.\..\..\linphone-3.5.2\coreapi" "-I.\..\..\linphone-3.5.2\mediastreamer2\include" "-I.\..\..\linphone-3.5.2\oRTP\include" "-I.\..\..\libeXosip2-3.6.0\include" "..\..\linphone-3.5.2\qt\sip_account.h" -o "$(Configuration)\moc_%(Filename).cpp"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="ui_callhistory.h" />
+    <ClInclude Include="ui_callviewframe.h" />
+    <ClInclude Include="ui_chatroom.h" />
+    <ClInclude Include="ui_conferenceframe.h" />
+    <ClInclude Include="ui_contact.h" />
+    <ClInclude Include="ui_debugwindow.h" />
+    <ClInclude Include="ui_mainwindow.h" />
+    <ClInclude Include="ui_password.h" />
+    <ClInclude Include="ui_preference.h" />
+    <ClInclude Include="ui_sip_account.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\callhistory.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\ui_%(Filename).h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\callviewframe.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\ui_%(Filename).h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\chatroom.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\ui_%(Filename).h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\conferenceframe.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\ui_%(Filename).h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\contact.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\ui_%(Filename).h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\debugwindow.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\ui_%(Filename).h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\mainwindow.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\ui_%(Filename).h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\password.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\ui_%(Filename).h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\preference.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\ui_%(Filename).h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\sip_account.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\ui_%(Filename).h" "%(FullPath)"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\ui_%(Filename).h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ad.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\add.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ae.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\af.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ag.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ai.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\al.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\am.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\an.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\anticheat.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ao.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\application-exit.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ar.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\as.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\at.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\au.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\aw.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ax.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\az.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ba.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\bb.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\bd.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\be.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\bf.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\bg.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\bh.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\bi.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\bj.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\bm.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\bn.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\bo.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\bookmarks-refresh.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\bookmarks.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\br.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\bs.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\bt.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\bw.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\by.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\bz.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\C.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ca.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\cc.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\cd.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\cf.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\cg.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ch.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\choose-file.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\chronometer.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ci.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ck.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\cl.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\close.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\cm.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\cn.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\co.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\configure.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\cr.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\cu.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\cv.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\cx.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\cy.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\cz.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\de.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\dialog-ok-apply.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\dj.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\dk.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\dm.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\do.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\download.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\dz.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\earth.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ec.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\edit-clear-history.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\edit-clear-locationbar-rtl.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\edit-clear-offline.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\edit-clear-selected.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\edit-clear.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\edit-copy.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\edit-find.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\edit.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ee.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\eg.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\eh.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\er.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\es.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\et.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\fi.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\fj.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\fk.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\fm.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\fo.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\fr.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\friends.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ga.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\gb.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\gd.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ge.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\gh.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\gi.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\gl.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\gm.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\gn.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\go-down.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\go-up.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\gp.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\gq.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\gr.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\gt.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\gtk-no.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\gtk-yes.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\gu.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\gw.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\gy.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\help-about.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\help-contents.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\history.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\hk.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\hn.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\hr.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ht.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\hu.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\id.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ie.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\il.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\in.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\insert-link.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\iq.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ir.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\is.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\it.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\jm.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\jo.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\jp.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ke.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\kg.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\kh.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ki.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\km.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\kn.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\kp.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\kr.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\kw.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ky.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\kz.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\la.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\launch.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\lb.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\lc.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\li.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\lk.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\lr.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ls.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\lt.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\lu.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\lv.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ly.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ma.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\mc.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\md.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\me.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\media-playback-pause.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\media-playback-start.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\mg.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\mh.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\mic_active.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\mic_muted.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\mk.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ml.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\mm.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\mn.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\mo.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\mq.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\mr.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ms.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\mt.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\mu.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\mv.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\mw.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\mx.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\my.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\mz.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\na.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\nc.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ne.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\nf.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ng.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ni.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\nl.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\no.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\np.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\nr.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\nu.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\nz.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\om.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\pa.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\pe.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\pf.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\pg.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ph.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\pin.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\pk.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\pl.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\play-sound.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\pm.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\pn.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\pr.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ps.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\pt.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\pw.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\py.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\qa.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\question.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\remove.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ro.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\rs.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ru.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\rw.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\sa.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\sb.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\sc.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\sd.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\se.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\sg.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\sh.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\si.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\sk.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\sl.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\sm.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\sn.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\so.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\speaker.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\sr.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\st.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\startcall-green.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\status-green.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\status-none.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\christmas\status-none.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\christmas\status-offline.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\status-offline.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\status-online.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\christmas\status-online.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\status-orange.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\status-passwd.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\status-red.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\status-update.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\christmas\status-update.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\stopcall-red.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\sv.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\sy.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\sz.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\tc.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\td.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\tg.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\th.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\tj.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\tk.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\tl.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\tm.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\tn.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\to.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\tp.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\tr.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuild Include="..\..\linphone-3.5.2\qt\treeview.qrc">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Rcc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath);..\..\linphone-3.5.2\qt\icons\go-down.png;..\..\linphone-3.5.2\qt\icons\media-playback-start.png;..\..\linphone-3.5.2\qt\icons\utilities-terminal.png;..\..\linphone-3.5.2\qt\icons\edit-clear-selected.png;..\..\linphone-3.5.2\qt\icons\edit-clear-offline.png;..\..\linphone-3.5.2\qt\icons\download.png;..\..\linphone-3.5.2\qt\icons\media-playback-pause.png;..\..\linphone-3.5.2\qt\icons\edit-clear.png;..\..\linphone-3.5.2\qt\icons\choose-file.png;..\..\linphone-3.5.2\qt\icons\edit-clear-history.png;..\..\linphone-3.5.2\qt\icons\earth.png;..\..\linphone-3.5.2\qt\icons\visible-on.png;..\..\linphone-3.5.2\qt\icons\status-none.png;..\..\linphone-3.5.2\qt\icons\status-offline.png;..\..\linphone-3.5.2\qt\icons\status-online.png;..\..\linphone-3.5.2\qt\icons\status-passwd.png;..\..\linphone-3.5.2\qt\icons\status-update.png;..\..\linphone-3.5.2\qt\icons\edit-clear-locationbar-rtl.png;..\..\linphone-3.5.2\qt\icons\edit-find.png;..\..\linphone-3.5.2\qt\icons\add.png;..\..\linphone-3.5.2\qt\icons\launch.png;..\..\linphone-3.5.2\qt\icons\application-exit.png;..\..\linphone-3.5.2\qt\icons\configure.png;..\..\linphone-3.5.2\qt\icons\bookmarks.png;..\..\linphone-3.5.2\qt\icons\help-about.png;..\..\linphone-3.5.2\qt\icons\help-contents.png;..\..\linphone-3.5.2\qt\icons\edit.png;..\..\linphone-3.5.2\qt\icons\edit-copy.png;..\..\linphone-3.5.2\qt\icons\remove.png;..\..\linphone-3.5.2\qt\icons\view-refresh.png;..\..\linphone-3.5.2\qt\icons\close.png;..\..\linphone-3.5.2\qt\icons\go-up.png;..\..\linphone-3.5.2\qt\icons\user-identity.png;..\..\linphone-3.5.2\qt\icons\history.png;..\..\linphone-3.5.2\qt\icons\view-filter.png;..\..\linphone-3.5.2\qt\icons\insert-link.png;..\..\linphone-3.5.2\qt\icons\zoom.png;..\..\linphone-3.5.2\qt\icons\dialog-ok-apply.png;..\..\linphone-3.5.2\qt\icons\pin.png;..\..\linphone-3.5.2\qt\icons\anticheat.png;..\..\linphone-3.5.2\qt\icons\friends.png;..\..\linphone-3.5.2\qt\icons\chronometer.png;..\..\linphone-3.5.2\qt\icons\question.png;..\..\linphone-3.5.2\qt\icons\play-sound.png;..\..\linphone-3.5.2\qt\icons\christmas\status-none.png;..\..\linphone-3.5.2\qt\icons\christmas\status-offline.png;..\..\linphone-3.5.2\qt\icons\christmas\status-online.png;..\..\linphone-3.5.2\qt\icons\christmas\status-update.png;..\..\linphone-3.5.2\qt\icons\bookmarks-refresh.png;..\..\linphone-3.5.2\qt\icons\startcall-green.png;..\..\linphone-3.5.2\qt\icons\status-green.png;..\..\linphone-3.5.2\qt\icons\status-orange.png;..\..\linphone-3.5.2\qt\icons\status-red.png;..\..\linphone-3.5.2\qt\icons\stopcall-red.png;..\..\linphone-3.5.2\qt\icons\gtk-yes.png;..\..\linphone-3.5.2\qt\icons\gtk-no.png;..\..\linphone-3.5.2\qt\icons\mic_active.png;..\..\linphone-3.5.2\qt\icons\mic_muted.png;..\..\linphone-3.5.2\qt\icons\speaker.png;..\..\linphone-3.5.2\qt\flags\ad.png;..\..\linphone-3.5.2\qt\flags\ae.png;..\..\linphone-3.5.2\qt\flags\af.png;..\..\linphone-3.5.2\qt\flags\ag.png;..\..\linphone-3.5.2\qt\flags\ai.png;..\..\linphone-3.5.2\qt\flags\al.png;..\..\linphone-3.5.2\qt\flags\am.png;..\..\linphone-3.5.2\qt\flags\an.png;..\..\linphone-3.5.2\qt\flags\ao.png;..\..\linphone-3.5.2\qt\flags\ar.png;..\..\linphone-3.5.2\qt\flags\as.png;..\..\linphone-3.5.2\qt\flags\at.png;..\..\linphone-3.5.2\qt\flags\au.png;..\..\linphone-3.5.2\qt\flags\aw.png;..\..\linphone-3.5.2\qt\flags\ax.png;..\..\linphone-3.5.2\qt\flags\az.png;..\..\linphone-3.5.2\qt\flags\ba.png;..\..\linphone-3.5.2\qt\flags\bb.png;..\..\linphone-3.5.2\qt\flags\bd.png;..\..\linphone-3.5.2\qt\flags\be.png;..\..\linphone-3.5.2\qt\flags\bf.png;..\..\linphone-3.5.2\qt\flags\bg.png;..\..\linphone-3.5.2\qt\flags\bh.png;..\..\linphone-3.5.2\qt\flags\bi.png;..\..\linphone-3.5.2\qt\flags\bj.png;..\..\linphone-3.5.2\qt\flags\bm.png;..\..\linphone-3.5.2\qt\flags\bn.png;..\..\linphone-3.5.2\qt\flags\bo.png;..\..\linphone-3.5.2\qt\flags\br.png;..\..\linphone-3.5.2\qt\flags\bs.png;..\..\linphone-3.5.2\qt\flags\bt.png;..\..\linphone-3.5.2\qt\flags\bw.png;..\..\linphone-3.5.2\qt\flags\by.png;..\..\linphone-3.5.2\qt\flags\bz.png;..\..\linphone-3.5.2\qt\flags\ca.png;..\..\linphone-3.5.2\qt\flags\cc.png;..\..\linphone-3.5.2\qt\flags\cd.png;..\..\linphone-3.5.2\qt\flags\cf.png;..\..\linphone-3.5.2\qt\flags\cg.png;..\..\linphone-3.5.2\qt\flags\ch.png;..\..\linphone-3.5.2\qt\flags\ci.png;..\..\linphone-3.5.2\qt\flags\ck.png;..\..\linphone-3.5.2\qt\flags\cl.png;..\..\linphone-3.5.2\qt\flags\cm.png;..\..\linphone-3.5.2\qt\flags\cn.png;..\..\linphone-3.5.2\qt\flags\co.png;..\..\linphone-3.5.2\qt\flags\C.png;..\..\linphone-3.5.2\qt\flags\cr.png;..\..\linphone-3.5.2\qt\flags\cu.png;..\..\linphone-3.5.2\qt\flags\cv.png;..\..\linphone-3.5.2\qt\flags\cx.png;..\..\linphone-3.5.2\qt\flags\cy.png;..\..\linphone-3.5.2\qt\flags\cz.png;..\..\linphone-3.5.2\qt\flags\de.png;..\..\linphone-3.5.2\qt\flags\dj.png;..\..\linphone-3.5.2\qt\flags\dk.png;..\..\linphone-3.5.2\qt\flags\dm.png;..\..\linphone-3.5.2\qt\flags\do.png;..\..\linphone-3.5.2\qt\flags\dz.png;..\..\linphone-3.5.2\qt\flags\ec.png;..\..\linphone-3.5.2\qt\flags\ee.png;..\..\linphone-3.5.2\qt\flags\eg.png;..\..\linphone-3.5.2\qt\flags\eh.png;..\..\linphone-3.5.2\qt\flags\er.png;..\..\linphone-3.5.2\qt\flags\es.png;..\..\linphone-3.5.2\qt\flags\et.png;..\..\linphone-3.5.2\qt\flags\fi.png;..\..\linphone-3.5.2\qt\flags\fj.png;..\..\linphone-3.5.2\qt\flags\fk.png;..\..\linphone-3.5.2\qt\flags\fm.png;..\..\linphone-3.5.2\qt\flags\fo.png;..\..\linphone-3.5.2\qt\flags\fr.png;..\..\linphone-3.5.2\qt\flags\ga.png;..\..\linphone-3.5.2\qt\flags\gb.png;..\..\linphone-3.5.2\qt\flags\gd.png;..\..\linphone-3.5.2\qt\flags\ge.png;..\..\linphone-3.5.2\qt\flags\gh.png;..\..\linphone-3.5.2\qt\flags\gi.png;..\..\linphone-3.5.2\qt\flags\gl.png;..\..\linphone-3.5.2\qt\flags\gm.png;..\..\linphone-3.5.2\qt\flags\gn.png;..\..\linphone-3.5.2\qt\flags\gp.png;..\..\linphone-3.5.2\qt\flags\gq.png;..\..\linphone-3.5.2\qt\flags\gr.png;..\..\linphone-3.5.2\qt\flags\gt.png;..\..\linphone-3.5.2\qt\flags\gu.png;..\..\linphone-3.5.2\qt\flags\gw.png;..\..\linphone-3.5.2\qt\flags\gy.png;..\..\linphone-3.5.2\qt\flags\hk.png;..\..\linphone-3.5.2\qt\flags\hn.png;..\..\linphone-3.5.2\qt\flags\hr.png;..\..\linphone-3.5.2\qt\flags\ht.png;..\..\linphone-3.5.2\qt\flags\hu.png;..\..\linphone-3.5.2\qt\flags\id.png;..\..\linphone-3.5.2\qt\flags\ie.png;..\..\linphone-3.5.2\qt\flags\il.png;..\..\linphone-3.5.2\qt\flags\in.png;..\..\linphone-3.5.2\qt\flags\iq.png;..\..\linphone-3.5.2\qt\flags\ir.png;..\..\linphone-3.5.2\qt\flags\is.png;..\..\linphone-3.5.2\qt\flags\it.png;..\..\linphone-3.5.2\qt\flags\jm.png;..\..\linphone-3.5.2\qt\flags\jo.png;..\..\linphone-3.5.2\qt\flags\jp.png;..\..\linphone-3.5.2\qt\flags\ke.png;..\..\linphone-3.5.2\qt\flags\kg.png;..\..\linphone-3.5.2\qt\flags\kh.png;..\..\linphone-3.5.2\qt\flags\ki.png;..\..\linphone-3.5.2\qt\flags\km.png;..\..\linphone-3.5.2\qt\flags\kn.png;..\..\linphone-3.5.2\qt\flags\kp.png;..\..\linphone-3.5.2\qt\flags\kr.png;..\..\linphone-3.5.2\qt\flags\kw.png;..\..\linphone-3.5.2\qt\flags\ky.png;..\..\linphone-3.5.2\qt\flags\kz.png;..\..\linphone-3.5.2\qt\flags\la.png;..\..\linphone-3.5.2\qt\flags\lb.png;..\..\linphone-3.5.2\qt\flags\lc.png;..\..\linphone-3.5.2\qt\flags\li.png;..\..\linphone-3.5.2\qt\flags\lk.png;..\..\linphone-3.5.2\qt\flags\lr.png;..\..\linphone-3.5.2\qt\flags\ls.png;..\..\linphone-3.5.2\qt\flags\lt.png;..\..\linphone-3.5.2\qt\flags\lu.png;..\..\linphone-3.5.2\qt\flags\lv.png;..\..\linphone-3.5.2\qt\flags\ly.png;..\..\linphone-3.5.2\qt\flags\ma.png;..\..\linphone-3.5.2\qt\flags\mc.png;..\..\linphone-3.5.2\qt\flags\md.png;..\..\linphone-3.5.2\qt\flags\me.png;..\..\linphone-3.5.2\qt\flags\mg.png;..\..\linphone-3.5.2\qt\flags\mh.png;..\..\linphone-3.5.2\qt\flags\mk.png;..\..\linphone-3.5.2\qt\flags\ml.png;..\..\linphone-3.5.2\qt\flags\mm.png;..\..\linphone-3.5.2\qt\flags\mn.png;..\..\linphone-3.5.2\qt\flags\mo.png;..\..\linphone-3.5.2\qt\flags\mq.png;..\..\linphone-3.5.2\qt\flags\mr.png;..\..\linphone-3.5.2\qt\flags\ms.png;..\..\linphone-3.5.2\qt\flags\mt.png;..\..\linphone-3.5.2\qt\flags\mu.png;..\..\linphone-3.5.2\qt\flags\mv.png;..\..\linphone-3.5.2\qt\flags\mw.png;..\..\linphone-3.5.2\qt\flags\mx.png;..\..\linphone-3.5.2\qt\flags\my.png;..\..\linphone-3.5.2\qt\flags\mz.png;..\..\linphone-3.5.2\qt\flags\na.png;..\..\linphone-3.5.2\qt\flags\nc.png;..\..\linphone-3.5.2\qt\flags\ne.png;..\..\linphone-3.5.2\qt\flags\nf.png;..\..\linphone-3.5.2\qt\flags\ng.png;..\..\linphone-3.5.2\qt\flags\ni.png;..\..\linphone-3.5.2\qt\flags\nl.png;..\..\linphone-3.5.2\qt\flags\no.png;..\..\linphone-3.5.2\qt\flags\np.png;..\..\linphone-3.5.2\qt\flags\nr.png;..\..\linphone-3.5.2\qt\flags\nu.png;..\..\linphone-3.5.2\qt\flags\nz.png;..\..\linphone-3.5.2\qt\flags\om.png;..\..\linphone-3.5.2\qt\flags\pa.png;..\..\linphone-3.5.2\qt\flags\pe.png;..\..\linphone-3.5.2\qt\flags\pf.png;..\..\linphone-3.5.2\qt\flags\pg.png;..\..\linphone-3.5.2\qt\flags\ph.png;..\..\linphone-3.5.2\qt\flags\pk.png;..\..\linphone-3.5.2\qt\flags\pl.png;..\..\linphone-3.5.2\qt\flags\pm.png;..\..\linphone-3.5.2\qt\flags\pn.png;..\..\linphone-3.5.2\qt\flags\pr.png;..\..\linphone-3.5.2\qt\flags\ps.png;..\..\linphone-3.5.2\qt\flags\pt.png;..\..\linphone-3.5.2\qt\flags\pw.png;..\..\linphone-3.5.2\qt\flags\py.png;..\..\linphone-3.5.2\qt\flags\qa.png;..\..\linphone-3.5.2\qt\flags\ro.png;..\..\linphone-3.5.2\qt\flags\rs.png;..\..\linphone-3.5.2\qt\flags\ru.png;..\..\linphone-3.5.2\qt\flags\rw.png;..\..\linphone-3.5.2\qt\flags\sa.png;..\..\linphone-3.5.2\qt\flags\sb.png;..\..\linphone-3.5.2\qt\flags\sc.png;..\..\linphone-3.5.2\qt\flags\sd.png;..\..\linphone-3.5.2\qt\flags\se.png;..\..\linphone-3.5.2\qt\flags\sg.png;..\..\linphone-3.5.2\qt\flags\sh.png;..\..\linphone-3.5.2\qt\flags\si.png;..\..\linphone-3.5.2\qt\flags\sk.png;..\..\linphone-3.5.2\qt\flags\sl.png;..\..\linphone-3.5.2\qt\flags\sm.png;..\..\linphone-3.5.2\qt\flags\sn.png;..\..\linphone-3.5.2\qt\flags\so.png;..\..\linphone-3.5.2\qt\flags\sr.png;..\..\linphone-3.5.2\qt\flags\st.png;..\..\linphone-3.5.2\qt\flags\sv.png;..\..\linphone-3.5.2\qt\flags\sy.png;..\..\linphone-3.5.2\qt\flags\sz.png;..\..\linphone-3.5.2\qt\flags\tc.png;..\..\linphone-3.5.2\qt\flags\td.png;..\..\linphone-3.5.2\qt\flags\tg.png;..\..\linphone-3.5.2\qt\flags\th.png;..\..\linphone-3.5.2\qt\flags\tj.png;..\..\linphone-3.5.2\qt\flags\tk.png;..\..\linphone-3.5.2\qt\flags\tl.png;..\..\linphone-3.5.2\qt\flags\tm.png;..\..\linphone-3.5.2\qt\flags\tn.png;..\..\linphone-3.5.2\qt\flags\to.png;..\..\linphone-3.5.2\qt\flags\tp.png;..\..\linphone-3.5.2\qt\flags\tr.png;..\..\linphone-3.5.2\qt\flags\tt.png;..\..\linphone-3.5.2\qt\flags\tv.png;..\..\linphone-3.5.2\qt\flags\tw.png;..\..\linphone-3.5.2\qt\flags\tz.png;..\..\linphone-3.5.2\qt\flags\ua.png;..\..\linphone-3.5.2\qt\flags\ug.png;..\..\linphone-3.5.2\qt\flags\us.png;..\..\linphone-3.5.2\qt\flags\uy.png;..\..\linphone-3.5.2\qt\flags\uz.png;..\..\linphone-3.5.2\qt\flags\va.png;..\..\linphone-3.5.2\qt\flags\vc.png;..\..\linphone-3.5.2\qt\flags\ve.png;..\..\linphone-3.5.2\qt\flags\vg.png;..\..\linphone-3.5.2\qt\flags\vi.png;..\..\linphone-3.5.2\qt\flags\vn.png;..\..\linphone-3.5.2\qt\flags\vu.png;..\..\linphone-3.5.2\qt\flags\wf.png;..\..\linphone-3.5.2\qt\flags\ws.png;..\..\linphone-3.5.2\qt\flags\ye.png;..\..\linphone-3.5.2\qt\flags\za.png;..\..\linphone-3.5.2\qt\flags\zm.png;..\..\linphone-3.5.2\qt\flags\zw.png;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Rcc%27ing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath);..\..\linphone-3.5.2\qt\icons\go-down.png;..\..\linphone-3.5.2\qt\icons\media-playback-start.png;..\..\linphone-3.5.2\qt\icons\utilities-terminal.png;..\..\linphone-3.5.2\qt\icons\edit-clear-selected.png;..\..\linphone-3.5.2\qt\icons\edit-clear-offline.png;..\..\linphone-3.5.2\qt\icons\download.png;..\..\linphone-3.5.2\qt\icons\media-playback-pause.png;..\..\linphone-3.5.2\qt\icons\edit-clear.png;..\..\linphone-3.5.2\qt\icons\choose-file.png;..\..\linphone-3.5.2\qt\icons\edit-clear-history.png;..\..\linphone-3.5.2\qt\icons\earth.png;..\..\linphone-3.5.2\qt\icons\visible-on.png;..\..\linphone-3.5.2\qt\icons\status-none.png;..\..\linphone-3.5.2\qt\icons\status-offline.png;..\..\linphone-3.5.2\qt\icons\status-online.png;..\..\linphone-3.5.2\qt\icons\status-passwd.png;..\..\linphone-3.5.2\qt\icons\status-update.png;..\..\linphone-3.5.2\qt\icons\edit-clear-locationbar-rtl.png;..\..\linphone-3.5.2\qt\icons\edit-find.png;..\..\linphone-3.5.2\qt\icons\add.png;..\..\linphone-3.5.2\qt\icons\launch.png;..\..\linphone-3.5.2\qt\icons\application-exit.png;..\..\linphone-3.5.2\qt\icons\configure.png;..\..\linphone-3.5.2\qt\icons\bookmarks.png;..\..\linphone-3.5.2\qt\icons\help-about.png;..\..\linphone-3.5.2\qt\icons\help-contents.png;..\..\linphone-3.5.2\qt\icons\edit.png;..\..\linphone-3.5.2\qt\icons\edit-copy.png;..\..\linphone-3.5.2\qt\icons\remove.png;..\..\linphone-3.5.2\qt\icons\view-refresh.png;..\..\linphone-3.5.2\qt\icons\close.png;..\..\linphone-3.5.2\qt\icons\go-up.png;..\..\linphone-3.5.2\qt\icons\user-identity.png;..\..\linphone-3.5.2\qt\icons\history.png;..\..\linphone-3.5.2\qt\icons\view-filter.png;..\..\linphone-3.5.2\qt\icons\insert-link.png;..\..\linphone-3.5.2\qt\icons\zoom.png;..\..\linphone-3.5.2\qt\icons\dialog-ok-apply.png;..\..\linphone-3.5.2\qt\icons\pin.png;..\..\linphone-3.5.2\qt\icons\anticheat.png;..\..\linphone-3.5.2\qt\icons\friends.png;..\..\linphone-3.5.2\qt\icons\chronometer.png;..\..\linphone-3.5.2\qt\icons\question.png;..\..\linphone-3.5.2\qt\icons\play-sound.png;..\..\linphone-3.5.2\qt\icons\christmas\status-none.png;..\..\linphone-3.5.2\qt\icons\christmas\status-offline.png;..\..\linphone-3.5.2\qt\icons\christmas\status-online.png;..\..\linphone-3.5.2\qt\icons\christmas\status-update.png;..\..\linphone-3.5.2\qt\icons\bookmarks-refresh.png;..\..\linphone-3.5.2\qt\icons\startcall-green.png;..\..\linphone-3.5.2\qt\icons\status-green.png;..\..\linphone-3.5.2\qt\icons\status-orange.png;..\..\linphone-3.5.2\qt\icons\status-red.png;..\..\linphone-3.5.2\qt\icons\stopcall-red.png;..\..\linphone-3.5.2\qt\icons\gtk-yes.png;..\..\linphone-3.5.2\qt\icons\gtk-no.png;..\..\linphone-3.5.2\qt\icons\mic_active.png;..\..\linphone-3.5.2\qt\icons\mic_muted.png;..\..\linphone-3.5.2\qt\icons\speaker.png;..\..\linphone-3.5.2\qt\flags\ad.png;..\..\linphone-3.5.2\qt\flags\ae.png;..\..\linphone-3.5.2\qt\flags\af.png;..\..\linphone-3.5.2\qt\flags\ag.png;..\..\linphone-3.5.2\qt\flags\ai.png;..\..\linphone-3.5.2\qt\flags\al.png;..\..\linphone-3.5.2\qt\flags\am.png;..\..\linphone-3.5.2\qt\flags\an.png;..\..\linphone-3.5.2\qt\flags\ao.png;..\..\linphone-3.5.2\qt\flags\ar.png;..\..\linphone-3.5.2\qt\flags\as.png;..\..\linphone-3.5.2\qt\flags\at.png;..\..\linphone-3.5.2\qt\flags\au.png;..\..\linphone-3.5.2\qt\flags\aw.png;..\..\linphone-3.5.2\qt\flags\ax.png;..\..\linphone-3.5.2\qt\flags\az.png;..\..\linphone-3.5.2\qt\flags\ba.png;..\..\linphone-3.5.2\qt\flags\bb.png;..\..\linphone-3.5.2\qt\flags\bd.png;..\..\linphone-3.5.2\qt\flags\be.png;..\..\linphone-3.5.2\qt\flags\bf.png;..\..\linphone-3.5.2\qt\flags\bg.png;..\..\linphone-3.5.2\qt\flags\bh.png;..\..\linphone-3.5.2\qt\flags\bi.png;..\..\linphone-3.5.2\qt\flags\bj.png;..\..\linphone-3.5.2\qt\flags\bm.png;..\..\linphone-3.5.2\qt\flags\bn.png;..\..\linphone-3.5.2\qt\flags\bo.png;..\..\linphone-3.5.2\qt\flags\br.png;..\..\linphone-3.5.2\qt\flags\bs.png;..\..\linphone-3.5.2\qt\flags\bt.png;..\..\linphone-3.5.2\qt\flags\bw.png;..\..\linphone-3.5.2\qt\flags\by.png;..\..\linphone-3.5.2\qt\flags\bz.png;..\..\linphone-3.5.2\qt\flags\ca.png;..\..\linphone-3.5.2\qt\flags\cc.png;..\..\linphone-3.5.2\qt\flags\cd.png;..\..\linphone-3.5.2\qt\flags\cf.png;..\..\linphone-3.5.2\qt\flags\cg.png;..\..\linphone-3.5.2\qt\flags\ch.png;..\..\linphone-3.5.2\qt\flags\ci.png;..\..\linphone-3.5.2\qt\flags\ck.png;..\..\linphone-3.5.2\qt\flags\cl.png;..\..\linphone-3.5.2\qt\flags\cm.png;..\..\linphone-3.5.2\qt\flags\cn.png;..\..\linphone-3.5.2\qt\flags\co.png;..\..\linphone-3.5.2\qt\flags\C.png;..\..\linphone-3.5.2\qt\flags\cr.png;..\..\linphone-3.5.2\qt\flags\cu.png;..\..\linphone-3.5.2\qt\flags\cv.png;..\..\linphone-3.5.2\qt\flags\cx.png;..\..\linphone-3.5.2\qt\flags\cy.png;..\..\linphone-3.5.2\qt\flags\cz.png;..\..\linphone-3.5.2\qt\flags\de.png;..\..\linphone-3.5.2\qt\flags\dj.png;..\..\linphone-3.5.2\qt\flags\dk.png;..\..\linphone-3.5.2\qt\flags\dm.png;..\..\linphone-3.5.2\qt\flags\do.png;..\..\linphone-3.5.2\qt\flags\dz.png;..\..\linphone-3.5.2\qt\flags\ec.png;..\..\linphone-3.5.2\qt\flags\ee.png;..\..\linphone-3.5.2\qt\flags\eg.png;..\..\linphone-3.5.2\qt\flags\eh.png;..\..\linphone-3.5.2\qt\flags\er.png;..\..\linphone-3.5.2\qt\flags\es.png;..\..\linphone-3.5.2\qt\flags\et.png;..\..\linphone-3.5.2\qt\flags\fi.png;..\..\linphone-3.5.2\qt\flags\fj.png;..\..\linphone-3.5.2\qt\flags\fk.png;..\..\linphone-3.5.2\qt\flags\fm.png;..\..\linphone-3.5.2\qt\flags\fo.png;..\..\linphone-3.5.2\qt\flags\fr.png;..\..\linphone-3.5.2\qt\flags\ga.png;..\..\linphone-3.5.2\qt\flags\gb.png;..\..\linphone-3.5.2\qt\flags\gd.png;..\..\linphone-3.5.2\qt\flags\ge.png;..\..\linphone-3.5.2\qt\flags\gh.png;..\..\linphone-3.5.2\qt\flags\gi.png;..\..\linphone-3.5.2\qt\flags\gl.png;..\..\linphone-3.5.2\qt\flags\gm.png;..\..\linphone-3.5.2\qt\flags\gn.png;..\..\linphone-3.5.2\qt\flags\gp.png;..\..\linphone-3.5.2\qt\flags\gq.png;..\..\linphone-3.5.2\qt\flags\gr.png;..\..\linphone-3.5.2\qt\flags\gt.png;..\..\linphone-3.5.2\qt\flags\gu.png;..\..\linphone-3.5.2\qt\flags\gw.png;..\..\linphone-3.5.2\qt\flags\gy.png;..\..\linphone-3.5.2\qt\flags\hk.png;..\..\linphone-3.5.2\qt\flags\hn.png;..\..\linphone-3.5.2\qt\flags\hr.png;..\..\linphone-3.5.2\qt\flags\ht.png;..\..\linphone-3.5.2\qt\flags\hu.png;..\..\linphone-3.5.2\qt\flags\id.png;..\..\linphone-3.5.2\qt\flags\ie.png;..\..\linphone-3.5.2\qt\flags\il.png;..\..\linphone-3.5.2\qt\flags\in.png;..\..\linphone-3.5.2\qt\flags\iq.png;..\..\linphone-3.5.2\qt\flags\ir.png;..\..\linphone-3.5.2\qt\flags\is.png;..\..\linphone-3.5.2\qt\flags\it.png;..\..\linphone-3.5.2\qt\flags\jm.png;..\..\linphone-3.5.2\qt\flags\jo.png;..\..\linphone-3.5.2\qt\flags\jp.png;..\..\linphone-3.5.2\qt\flags\ke.png;..\..\linphone-3.5.2\qt\flags\kg.png;..\..\linphone-3.5.2\qt\flags\kh.png;..\..\linphone-3.5.2\qt\flags\ki.png;..\..\linphone-3.5.2\qt\flags\km.png;..\..\linphone-3.5.2\qt\flags\kn.png;..\..\linphone-3.5.2\qt\flags\kp.png;..\..\linphone-3.5.2\qt\flags\kr.png;..\..\linphone-3.5.2\qt\flags\kw.png;..\..\linphone-3.5.2\qt\flags\ky.png;..\..\linphone-3.5.2\qt\flags\kz.png;..\..\linphone-3.5.2\qt\flags\la.png;..\..\linphone-3.5.2\qt\flags\lb.png;..\..\linphone-3.5.2\qt\flags\lc.png;..\..\linphone-3.5.2\qt\flags\li.png;..\..\linphone-3.5.2\qt\flags\lk.png;..\..\linphone-3.5.2\qt\flags\lr.png;..\..\linphone-3.5.2\qt\flags\ls.png;..\..\linphone-3.5.2\qt\flags\lt.png;..\..\linphone-3.5.2\qt\flags\lu.png;..\..\linphone-3.5.2\qt\flags\lv.png;..\..\linphone-3.5.2\qt\flags\ly.png;..\..\linphone-3.5.2\qt\flags\ma.png;..\..\linphone-3.5.2\qt\flags\mc.png;..\..\linphone-3.5.2\qt\flags\md.png;..\..\linphone-3.5.2\qt\flags\me.png;..\..\linphone-3.5.2\qt\flags\mg.png;..\..\linphone-3.5.2\qt\flags\mh.png;..\..\linphone-3.5.2\qt\flags\mk.png;..\..\linphone-3.5.2\qt\flags\ml.png;..\..\linphone-3.5.2\qt\flags\mm.png;..\..\linphone-3.5.2\qt\flags\mn.png;..\..\linphone-3.5.2\qt\flags\mo.png;..\..\linphone-3.5.2\qt\flags\mq.png;..\..\linphone-3.5.2\qt\flags\mr.png;..\..\linphone-3.5.2\qt\flags\ms.png;..\..\linphone-3.5.2\qt\flags\mt.png;..\..\linphone-3.5.2\qt\flags\mu.png;..\..\linphone-3.5.2\qt\flags\mv.png;..\..\linphone-3.5.2\qt\flags\mw.png;..\..\linphone-3.5.2\qt\flags\mx.png;..\..\linphone-3.5.2\qt\flags\my.png;..\..\linphone-3.5.2\qt\flags\mz.png;..\..\linphone-3.5.2\qt\flags\na.png;..\..\linphone-3.5.2\qt\flags\nc.png;..\..\linphone-3.5.2\qt\flags\ne.png;..\..\linphone-3.5.2\qt\flags\nf.png;..\..\linphone-3.5.2\qt\flags\ng.png;..\..\linphone-3.5.2\qt\flags\ni.png;..\..\linphone-3.5.2\qt\flags\nl.png;..\..\linphone-3.5.2\qt\flags\no.png;..\..\linphone-3.5.2\qt\flags\np.png;..\..\linphone-3.5.2\qt\flags\nr.png;..\..\linphone-3.5.2\qt\flags\nu.png;..\..\linphone-3.5.2\qt\flags\nz.png;..\..\linphone-3.5.2\qt\flags\om.png;..\..\linphone-3.5.2\qt\flags\pa.png;..\..\linphone-3.5.2\qt\flags\pe.png;..\..\linphone-3.5.2\qt\flags\pf.png;..\..\linphone-3.5.2\qt\flags\pg.png;..\..\linphone-3.5.2\qt\flags\ph.png;..\..\linphone-3.5.2\qt\flags\pk.png;..\..\linphone-3.5.2\qt\flags\pl.png;..\..\linphone-3.5.2\qt\flags\pm.png;..\..\linphone-3.5.2\qt\flags\pn.png;..\..\linphone-3.5.2\qt\flags\pr.png;..\..\linphone-3.5.2\qt\flags\ps.png;..\..\linphone-3.5.2\qt\flags\pt.png;..\..\linphone-3.5.2\qt\flags\pw.png;..\..\linphone-3.5.2\qt\flags\py.png;..\..\linphone-3.5.2\qt\flags\qa.png;..\..\linphone-3.5.2\qt\flags\ro.png;..\..\linphone-3.5.2\qt\flags\rs.png;..\..\linphone-3.5.2\qt\flags\ru.png;..\..\linphone-3.5.2\qt\flags\rw.png;..\..\linphone-3.5.2\qt\flags\sa.png;..\..\linphone-3.5.2\qt\flags\sb.png;..\..\linphone-3.5.2\qt\flags\sc.png;..\..\linphone-3.5.2\qt\flags\sd.png;..\..\linphone-3.5.2\qt\flags\se.png;..\..\linphone-3.5.2\qt\flags\sg.png;..\..\linphone-3.5.2\qt\flags\sh.png;..\..\linphone-3.5.2\qt\flags\si.png;..\..\linphone-3.5.2\qt\flags\sk.png;..\..\linphone-3.5.2\qt\flags\sl.png;..\..\linphone-3.5.2\qt\flags\sm.png;..\..\linphone-3.5.2\qt\flags\sn.png;..\..\linphone-3.5.2\qt\flags\so.png;..\..\linphone-3.5.2\qt\flags\sr.png;..\..\linphone-3.5.2\qt\flags\st.png;..\..\linphone-3.5.2\qt\flags\sv.png;..\..\linphone-3.5.2\qt\flags\sy.png;..\..\linphone-3.5.2\qt\flags\sz.png;..\..\linphone-3.5.2\qt\flags\tc.png;..\..\linphone-3.5.2\qt\flags\td.png;..\..\linphone-3.5.2\qt\flags\tg.png;..\..\linphone-3.5.2\qt\flags\th.png;..\..\linphone-3.5.2\qt\flags\tj.png;..\..\linphone-3.5.2\qt\flags\tk.png;..\..\linphone-3.5.2\qt\flags\tl.png;..\..\linphone-3.5.2\qt\flags\tm.png;..\..\linphone-3.5.2\qt\flags\tn.png;..\..\linphone-3.5.2\qt\flags\to.png;..\..\linphone-3.5.2\qt\flags\tp.png;..\..\linphone-3.5.2\qt\flags\tr.png;..\..\linphone-3.5.2\qt\flags\tt.png;..\..\linphone-3.5.2\qt\flags\tv.png;..\..\linphone-3.5.2\qt\flags\tw.png;..\..\linphone-3.5.2\qt\flags\tz.png;..\..\linphone-3.5.2\qt\flags\ua.png;..\..\linphone-3.5.2\qt\flags\ug.png;..\..\linphone-3.5.2\qt\flags\us.png;..\..\linphone-3.5.2\qt\flags\uy.png;..\..\linphone-3.5.2\qt\flags\uz.png;..\..\linphone-3.5.2\qt\flags\va.png;..\..\linphone-3.5.2\qt\flags\vc.png;..\..\linphone-3.5.2\qt\flags\ve.png;..\..\linphone-3.5.2\qt\flags\vg.png;..\..\linphone-3.5.2\qt\flags\vi.png;..\..\linphone-3.5.2\qt\flags\vn.png;..\..\linphone-3.5.2\qt\flags\vu.png;..\..\linphone-3.5.2\qt\flags\wf.png;..\..\linphone-3.5.2\qt\flags\ws.png;..\..\linphone-3.5.2\qt\flags\ye.png;..\..\linphone-3.5.2\qt\flags\za.png;..\..\linphone-3.5.2\qt\flags\zm.png;..\..\linphone-3.5.2\qt\flags\zw.png;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\tt.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\tv.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\tw.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\tz.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ua.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ug.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\us.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\user-identity.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\utilities-terminal.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\uy.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\uz.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\va.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\vc.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ve.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\vg.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\vi.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\view-filter.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\view-refresh.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\visible-on.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\vn.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\vu.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\wf.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ws.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\ye.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\za.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\zm.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\icons\zoom.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\linphone-3.5.2\qt\flags\zw.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <None Include="..\..\linphone-3.5.2\qt\build\win32native\linphone-qt_zh.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="linphone-qt.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties QtVersion_x0020_Win32="$(DefaultQtVersion)" RccDir=".\GeneratedFiles" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

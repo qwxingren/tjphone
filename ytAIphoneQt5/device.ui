@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Device</class>
+ <widget class="QDialog" name="Device">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>734</width>
+    <height>571</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>设备接口</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMaximumSize</enum>
+     </property>
+     <item>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="2">
+        <widget class="QLineEdit" name="lineEdit_Addr">
+         <property name="text">
+          <string>ws://127.0.0.1:8555/api</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>WebSocket 心跳间隔</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="2">
+        <widget class="QTextBrowser" name="textBrowser"/>
+       </item>
+       <item row="1" column="2">
+        <widget class="QSpinBox" name="spinBox">
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="minimum">
+          <number>20</number>
+         </property>
+         <property name="maximum">
+          <number>99</number>
+         </property>
+         <property name="value">
+          <number>30</number>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>WebSocket 地址</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="pushButton_Send">
+         <property name="text">
+          <string>发送</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QListWidget" name="listWidget_cmd">
+         <item>
+          <property name="text">
+           <string>{&quot;command&quot;:&quot;CheckUsbAudio&quot;}</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>{&quot;command&quot;:&quot;GetCCID&quot;}</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>{&quot;command&quot;:&quot;GetConnectedState_Multi&quot;}</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>{&quot;command&quot;:&quot;ReadSms&quot;,&quot;arguments&quot;:{&quot;content&quot;:&quot;1&quot;}}</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>{&quot;command&quot;:&quot;StartRecord&quot;}</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>{&quot;command&quot;:&quot;StopRecord&quot;}</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>{&quot;command&quot;:&quot;GetConnectedState&quot;}</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>{&quot;command&quot;:&quot;GetSignalLevel&quot;}</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>{&quot;command&quot;:&quot;GetSerialNumber&quot;}</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>{&quot;command&quot;:&quot;GetDeviceInfo&quot;}</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>{&quot;command&quot;:&quot;Dial&quot;,&quot;arguments&quot;:{&quot;phone&quot;:&quot;10086&quot;}}</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>{&quot;command&quot;:&quot;Answer&quot;}</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>{&quot;command&quot;:&quot;HungUp&quot;}</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>{&quot;command&quot;:&quot;GetCallState&quot;}</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>{&quot;command&quot;:&quot;ShowNumber&quot;}</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>{&quot;command&quot;:&quot;OpenDevice&quot;}</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>{&quot;command&quot;:&quot;CloseDevice&quot;}</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>{&quot;command&quot;:&quot;GetDeviceAudio&quot;}</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QPushButton" name="pushButton_clear">
+         <property name="text">
+          <string>清空</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <spacer>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>131</width>
+           <height>31</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>连接</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="okButton">
+         <property name="text">
+          <string>OK</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="cancelButton">
+         <property name="text">
+          <string>Cancel</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>okButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Device</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>346</x>
+     <y>211</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>96</x>
+     <y>254</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cancelButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Device</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>427</x>
+     <y>211</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>179</x>
+     <y>271</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Device</receiver>
+   <slot>WSTest()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>211</x>
+     <y>204</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>81</x>
+     <y>197</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_Send</sender>
+   <signal>clicked()</signal>
+   <receiver>Device</receiver>
+   <slot>WSSend()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>72</x>
+     <y>74</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>136</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_clear</sender>
+   <signal>clicked()</signal>
+   <receiver>textBrowser</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>546</x>
+     <y>74</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>546</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>WSTest()</slot>
+  <slot>WSSend()</slot>
+ </slots>
+</ui>
