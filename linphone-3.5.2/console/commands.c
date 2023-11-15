@@ -28,7 +28,7 @@
 #include <stdlib.h>
 #ifndef _WIN32_WCE
 #include <errno.h>
-#include <unistd.h>
+//#include <unistd.h>
 #endif /*_WIN32_WCE*/
 #include <limits.h>
 #include <ctype.h>
@@ -595,7 +595,7 @@ lpc_cmd_chat(LinphoneCore *lc, char *args)
 	char *arg1 = args;
 	char *arg2 = NULL;
 	char *ptr = args;
-
+	LinphoneChatRoom *cr;
 	if (!args) return 0;
 
 	/* Isolate first and second arg */
@@ -611,7 +611,7 @@ lpc_cmd_chat(LinphoneCore *lc, char *args)
 		/* missing one parameter */
 		return 0;
 	}
-	LinphoneChatRoom *cr = linphone_core_create_chat_room(lc,arg1);
+	cr = linphone_core_create_chat_room(lc,arg1);
 	linphone_chat_room_send_message(cr,arg2);
 	linphone_chat_room_destroy(cr);
 
@@ -2397,6 +2397,7 @@ static void lpc_display_call_states(LinphoneCore *lc){
 	LinphoneCall *call;
 	const MSList *elem;
 	char *tmp;
+	bool_t in_conference;
 	linphonec_out("Call states\n"
 	              "Id |            Destination              |      State      |    Flags   |\n"
 	              "------------------------------------------------------------------------\n");
@@ -2407,7 +2408,7 @@ static void lpc_display_call_states(LinphoneCore *lc){
 		for(;elem!=NULL;elem=elem->next){
 			const char *flag;
 			call=(LinphoneCall*)elem->data;
-			bool_t in_conference=linphone_call_params_local_conference_mode(linphone_call_get_current_params(call));
+			in_conference=linphone_call_params_local_conference_mode(linphone_call_get_current_params(call));
 			tmp=linphone_call_get_remote_address_as_string (call);
 			flag=in_conference ? "conferencing" : "";
 			flag=linphone_call_has_transfer_pending(call) ? "transfer pending" : flag;

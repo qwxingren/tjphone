@@ -25,9 +25,9 @@
  ****************************************************************************/
 #include <string.h>
 #ifndef _WIN32_WCE
-#include <sys/time.h>
+//#include <sys/time.h>
 #include <sys/types.h>
-#include <unistd.h>
+//#include <unistd.h>
 #include <errno.h>
 #include <signal.h>
 #include "private.h" /*coreapi/private.h, needed for LINPHONE_VERSION */
@@ -43,6 +43,8 @@
 #ifdef WIN32
 #include <ws2tcpip.h>
 #include <ctype.h>
+#include <winuser.h>
+#define F_OK 0
 #ifndef _WIN32_WCE
 #include <conio.h>
 #endif /*_WIN32_WCE*/
@@ -53,8 +55,6 @@
 #include <sys/stat.h>
 #endif
 
-#if defined(_WIN32_WCE)
-
 #if !defined(PATH_MAX)
 #define PATH_MAX 256
 #endif /*PATH_MAX*/
@@ -63,7 +63,6 @@
 #define strdup _strdup
 #endif /*strdup*/
 
-#endif /*_WIN32_WCE*/
 
 #ifdef HAVE_GETTEXT
 #include <libintl.h>
@@ -512,6 +511,7 @@ static void stop_pipe_reader(void){
 #endif
 
 char *linphonec_readline(char *prompt){
+	MSG msg;
 	if (unix_socket || !BOOL_HAVE_READLINE ){
 		static bool_t prompt_reader_started=FALSE;
 		static bool_t pipe_reader_started=FALSE;
@@ -542,7 +542,7 @@ char *linphonec_readline(char *prompt){
 			/* Following is to get the video window going as it
 				 should. Maybe should we only have this on when the option -V
 				 or -D is on? */
-			MSG msg;
+			
 	
 			if (PeekMessage(&msg, NULL, 0, 0,1)) {
 				TranslateMessage(&msg);
@@ -815,6 +815,7 @@ linphonec_prompt_for_auth_final(LinphoneCore *lc)
 	static int reentrancy=0;
 	char *input, *iptr;
 	char auth_prompt[256];
+	LinphoneAuthInfo *pending_auth;
 #ifdef HAVE_READLINE
 	rl_hook_func_t *old_event_hook;
 #endif
@@ -823,7 +824,7 @@ linphonec_prompt_for_auth_final(LinphoneCore *lc)
 	
 	reentrancy++;
 	
-	LinphoneAuthInfo *pending_auth=auth_stack.elem[auth_stack.nitems-1];
+	pending_auth=auth_stack.elem[auth_stack.nitems-1];
 
 	snprintf(auth_prompt, 256, "Password for %s on %s: ",
 		pending_auth->username, pending_auth->realm);
@@ -1249,7 +1250,7 @@ linphonec_parse_cmdline(int argc, char **argv)
 			   strlen ("--version")) == 0))
 		{
 #if !defined(_WIN32_WCE)
-			printf ("version: " LINPHONE_VERSION "\n");
+			printf ("version: 3.5.4\n");
 #endif
 			exit (EXIT_SUCCESS);
 		}
