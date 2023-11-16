@@ -7,15 +7,15 @@
 
 ### 1. linghone-qt 
   Qt绘制界面的linphone
-![screenshot](linphoneqt.PNG)
+![image](http://47.56.100.21/linphoneqt.png)
 
 ### 2. linphonec
    无界面，命令行的linphonec工程，非常适合熟悉了解调试libcoreapi的接口，学习掌握linphone
-![screenshot](debug_linphonec.PNG)
+![image](http://47.56.100.21/debug_linphonec.png)
 
 ### 3. ytAIphoneQt5 
   适配[亿维通讯的插卡话机](http://www.ewaytel.com/493.html)的软件，收到SIP呼叫后通过websocket接口向插卡话机发送拨号指令。
-![screenshot](插卡话机.PNG)
+![image](http://47.56.100.21/插卡话机.png)
 
 ## 开发环境搭建
 1. Visual Studio 2010
@@ -30,7 +30,7 @@
 2. 我在mediastreamer2中添加了[G729](https://github.com/qwxingren/tjphone/blob/main/linphone-3.5.2/mediastreamer2/src/linphone_g729.c)、[G723.1](https://github.com/qwxingren/tjphone/blob/main/linphone-3.5.2/mediastreamer2/src/linphone_g723.1.c)的支持，是基于Intel IPP开发库的示例代码编写的，项目文件中提供的了静态库。
 
 ## 代码的依赖关系
-![screenshot](代码依赖.png)
+![image](http://47.56.100.21/代码依赖.png)
    
 ## 欢迎一起交流
 email <jiakejia@163.com>
